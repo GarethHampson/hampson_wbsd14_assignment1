@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>WBSD's ASP.NET Web Site</title>
+	<asp:ContentPlaceHolder id="head" runat="server">
+	</asp:ContentPlaceHolder>
+	 <link href="css/css/reset.css" media="screen" rel="stylesheet" type="text/css" >
+	 <link href="css/css/960.css" media="screen" rel="stylesheet" type="text/css" >
+	 <link href="css/css/text.css" media="screen" rel="stylesheet" type="text/css" >
+	 <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" >
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div id="container" class="container_16"> 
+			<div id="title" class="grid_16"> 
+				<img src="images/Salford_logo.png" alt="Salford University" />
+			</div> 
+			<div id="menu" class="grid_3">
+				<ul>
+					<li><a href="Login.aspx">Login</a></li>
+                </ul>
+			</div>
+	   
+			<div id="content" class="grid_13">
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+		
+				</asp:ContentPlaceHolder>
+			</div>
+
+			<div id="footer" class="grid_16"> 
+				<p>Salford Friends Network</p> 
+			</div> 
+			
+	</div> 
+	</form>
+</body>
+</html>

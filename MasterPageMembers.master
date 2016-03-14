@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageMembers.master.cs"
+    Inherits="MasterPage" %>
+
+<%@ Register src="MembersArea/LoggedInDetails.ascx" tagname="LoggedInDetails" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WBSD's ASP.NET Web Site</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/css/960.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/css/text.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .style2
+        {
+            text-align: left;
+            color: #C60C30;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container" class="container_16">
+        <div id="title" class="grid_16">
+            <img src="../images/Salford_logo.png" alt="Salford University" style="float: left" />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        &nbsp;<h1 class="style2">
+                Salford Friend&#39;s Network</h1>
+            <p>
+                <uc1:LoggedInDetails ID="LoggedInDetails1" runat="server" />
+            </p>
+        </div>
+        </div>
+        
+        <div id="menu" class="grid_3">
+            <ul>
+                <li><a href="../Login.aspx">Login</a></li>
+                <li><a href="../MembersArea/ProfilePage.aspx">Profile Pages</a></li>
+                <li><a href="../MembersArea/AllMembers.aspx">View All Members</a></li>
+                <li><a href="../MembersArea/Forum.aspx">Forum</a></li>
+                <li><a href="../MembersArea/EmailPage.aspx">Email Admin</a></li>
+            </ul>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="content" class="grid_13">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer" class="grid_16">
+            <p>
+                Salford Friends Network</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
